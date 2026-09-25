@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fffafb;
+    color: #594b51;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: #fceff4;
+    padding: 45px 20px 55px;
+    text-align: center;
+    border-bottom: 1px solid #f1d9e2;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    color: #8f5369;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header h1::after {
+    content: " ♡";
+    color: #c77b96;
+}
+
+header p {
+    color: #7b6870;
+    font-size: 15px;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+
+    border: 1px solid #f1dfe5;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(170, 110, 130, 0.06);
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: #9b5c72;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.sobre-mim {
+    text-align: center;
+}
+
+.sobre-mim img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #f4d6e0;
+
+    margin: 10px 0 20px;
+
+    box-shadow: 0 5px 18px rgba(160, 100, 120, 0.15);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #fff7fa;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    border: 1px solid #f3dce5;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: #fdf0f5;
+}
+
+.card h3 {
+    color: #a55f78;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   INTERESSES
+========================= */
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #fff5f8;
+
+    padding: 10px 15px;
+
+    margin: 8px 0;
+
+    border-radius: 8px;
+
+    border-left: 3px solid #d894aa;
+}
+
+
+/* =========================
+   OBJETIVOS
+========================= */
+
+#objetivos {
+    background: #fdf3f7;
+}
+
+
+/* =========================
+   FRASE
+========================= */
+
+.frase {
+    text-align: center;
+
+    background: #fff7fa;
+
+    border: none;
+}
+
+.frase p {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    font-style: italic;
+
+    color: #95566d;
+}
+
+
+/* =========================
+   PEQUENOS DETALHES
+========================= */
+
+section h2::first-letter {
+    color: #c87895;
+}
+
+section::before {
+    content: "♡";
+    display: block;
+
+    color: #dda0b5;
+
+    text-align: right;
+
+    font-size: 18px;
+
+    margin-bottom: -15px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #604b54;
+
+    color: #fceff4;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 22px;
+    }
+}
+
