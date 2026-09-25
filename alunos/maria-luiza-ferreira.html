@@ -1,19 +1,970 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Maria Luiza 💗</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --creme: #fffaf7;
+            --rosa-claro: #ffe4ec;
+            --rosa-bebe: #ffc6d9;
+            --rosa: #f78fb3;
+            --rosa-forte: #ed5f91;
+            --pink: #d93673;
+            --vinho: #8f3157;
+            --texto: #633d4b;
+            --branco: #ffffff;
+        }
+
+        body {
+            background-color: var(--creme);
+            color: var(--texto);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+        }
+
+        /* ---------------- HEADER ---------------- */
+
+        header {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 10% 20%, #ffd4e2 0 8%, transparent 9%),
+                radial-gradient(circle at 90% 15%, #f7b4cc 0 7%, transparent 8%),
+                radial-gradient(circle at 85% 85%, #ffdce8 0 10%, transparent 11%),
+                linear-gradient(135deg, #fffaf7, #ffeaf1);
+        }
+
+        header::before {
+            content: "♡";
+            position: absolute;
+            font-size: 180px;
+            color: rgba(237, 95, 145, 0.08);
+            left: -20px;
+            top: 30px;
+            transform: rotate(-15deg);
+        }
+
+        header::after {
+            content: "✦";
+            position: absolute;
+            font-size: 120px;
+            color: rgba(217, 54, 115, 0.10);
+            right: 30px;
+            bottom: 20px;
+        }
+
+        .hero {
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mini-text {
+            color: var(--rosa-forte);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            color: var(--pink);
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--rosa);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .decoracao {
+            font-size: 28px;
+            margin-top: 25px;
+            color: var(--rosa-forte);
+            letter-spacing: 12px;
+        }
+
+        /* ---------------- CONTEÚDO ---------------- */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        .titulo-secao {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo-secao .emoji {
+            font-size: 35px;
+        }
+
+        .titulo-secao h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 42px;
+            color: var(--pink);
+            margin-top: 5px;
+        }
+
+        .titulo-secao p {
+            color: #a35c76;
+            margin-top: 5px;
+        }
+
+        /* ---------------- CARDS ---------------- */
+
+        .card {
+            background: var(--branco);
+            border: 2px solid var(--rosa-claro);
+            border-radius: 28px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(217, 54, 115, 0.08);
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .destaque {
+            background: linear-gradient(135deg, #fff, #ffe8f0);
+            border-left: 7px solid var(--rosa-forte);
+        }
+
+        .destaque strong {
+            color: var(--pink);
+        }
+
+        /* ---------------- SOBRE MIM ---------------- */
+
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .personalidade {
+            background: var(--rosa-claro);
+            border: none;
+        }
+
+        .personalidade h3 {
+            color: var(--pink);
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        /* ---------------- FAMÍLIA ---------------- */
+
+        .familia-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .familia-card {
+            text-align: center;
+            background: #fff;
+            border-radius: 25px;
+            padding: 30px 20px;
+            border: 2px dashed var(--rosa);
+        }
+
+        .familia-card .icone {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .familia-card h3 {
+            color: var(--pink);
+            margin-bottom: 8px;
+        }
+
+        /* ---------------- FÉ ---------------- */
+
+        .fe {
+            background: linear-gradient(135deg, #fff, #fff0f5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fe::after {
+            content: "♡";
+            position: absolute;
+            right: 30px;
+            top: 10px;
+            font-size: 130px;
+            color: rgba(237, 95, 145, 0.08);
+        }
+
+        .fe-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .nossa-senhora {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        /* ---------------- ESCOLA ---------------- */
+
+        .escolas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .escola {
+            background: var(--rosa-claro);
+            color: var(--pink);
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .escola.atual {
+            background: var(--rosa-forte);
+            color: white;
+        }
+
+        /* ---------------- MÚSICA ---------------- */
+
+        .musica-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .musica {
+            padding: 35px;
+            border-radius: 30px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .musica::after {
+            content: "♫";
+            position: absolute;
+            right: 25px;
+            bottom: -15px;
+            font-size: 100px;
+            opacity: 0.15;
+        }
+
+        .justin {
+            background: linear-gradient(135deg, #e76f9a, #b92e61);
+        }
+
+        .luan {
+            background: linear-gradient(135deg, #f29ab8, #df527f);
+        }
+
+        .musica h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .musica strong {
+            font-size: 18px;
+        }
+
+        /* ---------------- CURIOSIDADES ---------------- */
+
+        .curiosidades-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .curiosidade {
+            background: white;
+            padding: 25px;
+            border-radius: 24px;
+            border: 2px solid var(--rosa-claro);
+            text-align: center;
+        }
+
+        .curiosidade .emoji {
+            font-size: 35px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .curiosidade h3 {
+            color: var(--pink);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* ---------------- FUTURO ---------------- */
+
+        .futuro {
+            background: linear-gradient(135deg, #fff0f5, #ffd8e6);
+            border: none;
+        }
+
+        .futuro-content {
+            text-align: center;
+        }
+
+        .medicina {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        .futuro h3 {
+            font-size: 30px;
+            color: var(--pink);
+            margin-bottom: 10px;
+        }
+
+        .faculdades {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .faculdade {
+            background: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            color: var(--pink);
+            font-weight: 600;
+        }
+
+        /* ---------------- SONHOS ---------------- */
+
+        .sonhos {
+            text-align: center;
+        }
+
+        .sonhos-box {
+            background: white;
+            border-radius: 35px;
+            padding: 45px 30px;
+            border: 3px solid var(--rosa-claro);
+            position: relative;
+        }
+
+        .sonhos-box::before,
+        .sonhos-box::after {
+            content: "♡";
+            position: absolute;
+            font-size: 55px;
+            color: var(--rosa-bebe);
+        }
+
+        .sonhos-box::before {
+            left: 20px;
+            top: 15px;
+        }
+
+        .sonhos-box::after {
+            right: 20px;
+            bottom: 10px;
+        }
+
+        .filhos {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filho {
+            background: var(--rosa-claro);
+            padding: 20px 35px;
+            border-radius: 25px;
+        }
+
+        .filho .emoji {
+            font-size: 40px;
+            display: block;
+        }
+
+        .filho strong {
+            color: var(--pink);
+            font-size: 20px;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            background: var(--pink);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        footer h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        .coracoes {
+            font-size: 22px;
+            margin-top: 15px;
+            letter-spacing: 8px;
+        }
+
+        /* ---------------- RESPONSIVIDADE ---------------- */
+
+        @media (max-width: 800px) {
+            .sobre-grid,
+            .musica-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .familia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .curiosidades-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .curiosidades-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .titulo-secao h2 {
+                font-size: 34px;
+            }
+
+            main {
+                padding: 50px 15px;
+            }
+
+            .card,
+            .sonhos-box {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    Meu nome é Maria Luiza Alves Ferreira, tenho 15 anos, faço aniversario dia 12/06/20111, eu vim antes da data prevista , a data prevista do meu nascimento era dia 07/07/2011.
-Minha familia por parte de mãe é catarinense e curitibana e a do meu pai é toda mineira. (eu particularmente gosto mais de ir para MG).
-Eu sou catolica, comungada e crismada, fiz catequese de atrasado por 3 anos.
-Eu sou uma menina que as vezes sou bem grossa com as pessoas, principalemnte quando são mal educados comigo mas por mais que eu seja grossa assim, eu também sou MUITO sensivel,choro muito, por motivos tolos.
-Minha vida toda eu estudei em escola particular ( sempre com bolsa) , estudei no colegio keluc, Anchieta e faço meu ensino medio no sinerge, e entre todas essas escolas, eu AMO estudar no sinerge, tenhos muitas amizades incriveis.
-Meu cantor favorito, internacional, é o justin biber e minha musica favorita dele é "  love yourself " e nacional é o Luan santana e a minha favorita dele é "Ilha", mas eu amo sertanejo em geral.
-Sou filha unica, por parte de pai eu sou a unica neta da familia, ja por parte da minha mãe eu tenho um primo de 13 anos.
-Algumas curiosidades sobre mim é que tenho MUITAS alergias e algums delas são; picada de insetos, carne de porco, cacau, brincos, colar, bijuterias, meu suor.
-Nunca namorei, pretendo namorar com 17 anos, tenho o sonho de casar, ter 2 filhos, uma menina ( cecilia) e um menino (murilo), quero fazer faculdade de medicina e me especializar em pediatria, quero fazer faculdade ou na mackenzie ou no pequeno principe
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+        <div class="hero">
+
+            <div class="mini-text">♡ um pouquinho sobre mim ♡</div>
+
+            <h1>
+                Oi, eu sou a<br>
+                <span>Maria Luiza!</span> 💗
+            </h1>
+
+            <p>
+                Uma menina sensível, sonhadora, apaixonada por música,
+                pela minha família, por Medicina e por tudo aquilo que
+                faz parte da minha história.
+            </p>
+
+            <div class="decoracao">
+                ♡ ✦ ♡ ✦ ♡
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             SOBRE MIM
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🌷</div>
+                <h2>Sobre mim</h2>
+                <p>Conhecendo um pouquinho da Maria Luiza</p>
+            </div>
+
+            <div class="sobre-grid">
+
+                <div class="card">
+                    <p>
+                        Meu nome é <strong>Maria Luiza Alves Ferreira</strong>,
+                        tenho 15 anos e faço aniversário no dia
+                        <strong>12 de junho de 2011</strong>.
+                    </p>
+
+                    <p>
+                        Eu vim antes da data prevista! Minha previsão de
+                        nascimento era para o dia <strong>7 de julho de 2011</strong>,
+                        mas resolvi chegar um pouquinho antes.
+                    </p>
+                </div>
+
+                <div class="card personalidade">
+                    <h3>💗 Minha personalidade</h3>
+
+                    <p>
+                        Às vezes sou bem grossa com as pessoas, principalmente
+                        quando são mal-educadas comigo.
+                    </p>
+
+                    <p>
+                        Mas, apesar disso, sou <strong>MUITO sensível</strong>.
+                        Choro bastante, até por motivos que às vezes parecem
+                        bobos para outras pessoas.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FAMÍLIA
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🏡</div>
+                <h2>Minha família</h2>
+                <p>De onde vem um pouquinho de mim</p>
+            </div>
+
+            <div class="familia-grid">
+
+                <div class="familia-card">
+                    <div class="icone">🌷</div>
+                    <h3>Por parte de mãe</h3>
+                    <p>
+                        Minha família materna é catarinense
+                        e curitibana.
+                    </p>
+                </div>
+
+                <div class="familia-card">
+                    <div class="icone">⛰️</div>
+                    <h3>Por parte de pai</h3>
+                    <p>
+                        A família do meu pai é toda mineira.
+                        E, particularmente, eu gosto mais de ir para MG. 💗
+                    </p>
+                </div>
+
+                <div class="familia-card">
+                    <div class="icone">👨‍👩‍👧</div>
+                    <h3>Filha única</h3>
+                    <p>
+                        Sou filha única. Por parte de pai, sou a única
+                        neta da família.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card destaque" style="margin-top: 20px;">
+                <p>
+                    Por parte da minha mãe, tenho um primo de
+                    <strong>13 anos</strong>. 💕
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FÉ
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🙏</div>
+                <h2>Minha fé</h2>
+                <p>Uma parte importante de quem eu sou</p>
+            </div>
+
+            <div class="card fe">
+
+                <div class="fe-content">
+
+                    <div class="nossa-senhora">🌹</div>
+
+                    <p>
+                        Sou <strong>católica, comungada e crismada</strong>.
+                    </p>
+
+                    <p>
+                        Fiz catequese de atrasado durante 3 anos,
+                        e minha fé faz parte da minha história.
+                    </p>
+
+                    <p style="margin-top: 20px;">
+                        <strong>“Que Nossa Senhora sempre cuide dos meus caminhos.” 🤍</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ESCOLA
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🎓</div>
+                <h2>Minha vida escolar</h2>
+                <p>Onde eu passei e onde estou agora</p>
+            </div>
+
+            <div class="card">
+
+                <div class="escolas">
+
+                    <div class="escola">
+                        🏫 Colégio Keluc
+                    </div>
+
+                    <div class="escola">
+                        📚 Anchieta
+                    </div>
+
+                    <div class="escola atual">
+                        💗 Sinerge
+                    </div>
+
+                </div>
+
+                <p>
+                    Minha vida toda estudei em escola particular,
+                    sempre com bolsa.
+                </p>
+
+                <p>
+                    Estudei no Colégio Keluc, depois no Anchieta e
+                    atualmente faço meu Ensino Médio no Sinerge.
+                </p>
+
+                <p>
+                    Entre todas essas escolas, eu
+                    <strong>AMO estudar no Sinerge!</strong>
+                    Tenho muitas amizades incríveis lá e isso tornou
+                    essa fase muito especial para mim. 💕
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MÚSICA
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🎧</div>
+                <h2>Minha playlist</h2>
+                <p>As músicas que têm um espacinho no meu coração</p>
+            </div>
+
+            <div class="musica-grid">
+
+                <div class="musica justin">
+
+                    <h3>🎤 Justin Bieber</h3>
+
+                    <p>
+                        Meu cantor internacional favorito.
+                    </p>
+
+                    <p>
+                        Minha música favorita dele é:
+                    </p>
+
+                    <strong>“Love Yourself”</strong>
+
+                </div>
+
+                <div class="musica luan">
+
+                    <h3>🎶 Luan Santana</h3>
+
+                    <p>
+                        Meu cantor nacional favorito.
+                    </p>
+
+                    <p>
+                        Minha música favorita dele é:
+                    </p>
+
+                    <strong>“Ilha”</strong>
+
+                </div>
+
+            </div>
+
+            <div class="card destaque" style="margin-top: 20px; text-align: center;">
+                <p>
+                    E, além deles, eu <strong>AMO sertanejo</strong> em geral! 🤍🎶
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CURIOSIDADES
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🎀</div>
+                <h2>Curiosidades sobre mim</h2>
+                <p>Algumas coisas que fazem parte da minha história</p>
+            </div>
+
+            <div class="curiosidades-grid">
+
+                <div class="curiosidade">
+                    <span class="emoji">🦋</span>
+                    <h3>Insetos</h3>
+                    <p>
+                        Tenho alergia a picadas de insetos.
+                    </p>
+                </div>
+
+                <div class="curiosidade">
+                    <span class="emoji">🥩</span>
+                    <h3>Carne de porco</h3>
+                    <p>
+                        Também tenho alergia a carne de porco.
+                    </p>
+                </div>
+
+                <div class="curiosidade">
+                    <span class="emoji">🍫</span>
+                    <h3>Cacau</h3>
+                    <p>
+                        Cacau também está na lista.
+                    </p>
+                </div>
+
+                <div class="curiosidade">
+                    <span class="emoji">💎</span>
+                    <h3>Bijuterias</h3>
+                    <p>
+                        Tenho alergia a brincos, colares e bijuterias.
+                    </p>
+                </div>
+
+                <div class="curiosidade">
+                    <span class="emoji">💦</span>
+                    <h3>Suor</h3>
+                    <p>
+                        Até mesmo meu suor pode causar alergia.
+                    </p>
+                </div>
+
+                <div class="curiosidade">
+                    <span class="emoji">💗</span>
+                    <h3>Sensível</h3>
+                    <p>
+                        Sou uma pessoa muito sensível e emotiva.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FUTURO / MEDICINA
+        ========================== -->
+
+        <section>
+
+            <div class="titulo-secao">
+                <div class="emoji">🩺</div>
+                <h2>Meu futuro</h2>
+                <p>Um sonho que quero transformar em realidade</p>
+            </div>
+
+            <div class="card futuro">
+
+                <div class="futuro-content">
+
+                    <div class="medicina">🩺👶🏻</div>
+
+                    <h3>Quero fazer Medicina!</h3>
+
+                    <p>
+                        Um dos meus maiores sonhos é fazer faculdade de
+                        <strong>Medicina</strong> e me especializar em
+                        <strong>Pediatria</strong>.
+                    </p>
+
+                    <p>
+                        Gosto da ideia de trabalhar cuidando de crianças
+                        e poder fazer parte de momentos importantes
+                        na vida delas.
+                    </p>
+
+                    <div class="faculdades">
+
+                        <div class="faculdade">
+                            🎓 Mackenzie
+                        </div>
+
+                        <div class="faculdade">
+                            🏥 Pequeno Príncipe
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SONHOS
+        ========================== -->
+
+        <section class="sonhos">
+
+            <div class="titulo-secao">
+                <div class="emoji">💍</div>
+                <h2>Meus sonhos</h2>
+                <p>Coisas que imagino para o meu futuro</p>
+            </div>
+
+            <div class="sonhos-box">
+
+                <p>
+                    Nunca namorei e pretendo namorar aos
+                    <strong>17 anos</strong>.
+                </p>
+
+                <p style="margin-top: 15px;">
+                    Tenho o sonho de me casar e construir uma família.
+                    No meu futuro, imagino ter dois filhos:
+                    uma menina e um menino. 💗
+                </p>
+
+                <div class="filhos">
+
+                    <div class="filho">
+                        <span class="emoji">👧🏻</span>
+                        <strong>Cecília</strong>
+                        <p>Minha futura menina</p>
+                    </div>
+
+                    <div class="filho">
+                        <span class="emoji">👦🏻</span>
+                        <strong>Murilo</strong>
+                        <p>Meu futuro menino</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <h2>Maria Luiza 💗</h2>
+
+        <p>
+            Uma menina cheia de sonhos, sentimentos,
+            histórias e planos para o futuro.
+        </p>
+
+        <div class="coracoes">
+            ♡ ✦ ♡ ✦ ♡
+        </div>
+
+    </footer>
+
 </body>
 </html>
