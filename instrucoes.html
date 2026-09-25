@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instruções da Atividade — 1º Ano - Ensino Médio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="assets/logo-sinerge.png" alt="Logo do Colégio Sinerge" class="logo-sinerge" />
+    <h1>Instruções da Atividade</h1>
+    <p>1º Ano - Ensino Médio — Atividade do Prof. Ricardo Varjão</p>
+  </header>
+
+  <main class="pagina-instrucoes">
+
+    <h2>O desafio</h2>
+    <p>
+      A turma inteira vai trabalhar <strong>no mesmo repositório</strong>.
+      Cada aluno deverá criar sua própria página dentro do site da turma,
+      <strong>sem alterar a página dos colegas</strong>.
+    </p>
+    <p>
+      No final, o site terá uma página inicial (<code>index.html</code>) com
+      o nome de todos os alunos. Ao clicar no seu nome, cada um deve chegar
+      até a página que você mesmo criou.
+    </p>
+    <p>
+      Essa atividade não é sobre HTML bonito — é sobre aprender, na prática,
+      como um time usa Git e GitHub para trabalhar no mesmo projeto sem
+      bagunçar o trabalho dos outros.
+    </p>
+
+    <hr />
+
+    <h2>Passo a passo</h2>
+
+    <h3>1. Clonar o projeto</h3>
+    <pre><code>git clone URL_DO_REPOSITORIO</code></pre>
+    <p>
+      <code>git clone</code> faz uma cópia completa do repositório (com todo
+      o histórico) do GitHub para o seu computador. É a partir dessa cópia
+      local que você vai trabalhar.
+    </p>
+
+    <h3>2. Entrar na pasta</h3>
+    <pre><code>cd NOME_DO_REPOSITORIO</code></pre>
+
+    <h3>3. Criar sua própria branch</h3>
+    <p>
+      Uma branch é como uma "linha do tempo paralela" do projeto, onde você
+      pode fazer alterações sem afetar o trabalho dos outros. Crie uma com o
+      seu nome:
+    </p>
+    <pre><code>git switch -c seu-nome-sobrenome</code></pre>
+    <p>Exemplo:</p>
+    <pre><code>git switch -c joao-silva</code></pre>
+    <p>Use o <strong>mesmo nome/sobrenome</strong> que você vai usar no arquivo da sua página.</p>
+    <p class="aviso">
+      ⚠️ <strong>Nunca faça alterações diretamente na branch <code>main</code>.</strong>
+      A <code>main</code> é a versão oficial do site. Todo trabalho começa em
+      uma branch própria.
+    </p>
+
+    <h3>4. Criar sua página</h3>
+    <p>
+      Dentro da pasta <code>alunos/</code>, crie um arquivo HTML com o seu
+      nome, por exemplo:
+    </p>
+    <pre><code>alunos/joao-silva.html</code></pre>
+    <p class="aviso">
+      ⚠️ O nome do arquivo precisa ser <strong>exatamente igual</strong> ao
+      endereço que já está configurado no link do seu nome em
+      <code>index.html</code>. Se o link aponta para
+      <code>alunos/joao-silva.html</code>, o arquivo criado precisa ter esse
+      nome exato (letras minúsculas, sem espaços e sem acentos).
+    </p>
+    <p>Veja mais abaixo um exemplo de estrutura para a sua página.</p>
+
+    <h3>5. Conferir o que foi alterado</h3>
+    <pre><code>git status</code></pre>
+    <p>
+      Esse comando mostra quais arquivos foram criados, modificados ou
+      removidos desde o último commit. Use-o sempre que quiser conferir o
+      que está prestes a enviar.
+    </p>
+
+    <h3>6. Adicionar o arquivo ao commit</h3>
+    <pre><code>git add alunos/joao-silva.html</code></pre>
+    <p>O <code>git add</code> seleciona o arquivo que você quer incluir no próximo commit.</p>
+
+    <h3>7. Criar o commit</h3>
+    <pre><code>git commit -m "Adiciona página do João Silva"</code></pre>
+    <p>
+      Um commit é um "registro" (uma foto) de uma alteração no projeto, com
+      uma mensagem explicando o que foi feito. Ele fica guardado no
+      histórico do Git para sempre.
+    </p>
+
+    <h3>8. Enviar sua branch para o GitHub</h3>
+    <pre><code>git push -u origin joao-silva</code></pre>
+    <p>
+      Esse comando envia a sua branch (com o seu commit) para o repositório
+      no GitHub, deixando-a disponível para o professor revisar e, depois,
+      juntar o seu trabalho à <code>main</code>.
+    </p>
+
+    <hr />
+
+    <h2>Regras da atividade</h2>
+    <ul>
+      <li>❌ Não altere a página de outro aluno.</li>
+      <li>❌ Não trabalhe diretamente na branch <code>main</code>.</li>
+      <li>✅ Cada aluno deve criar sua própria branch.</li>
+      <li>✅ Cada aluno deve criar <strong>apenas</strong> o seu próprio arquivo dentro da pasta <code>alunos/</code>.</li>
+      <li>❌ Não altere o <code>index.html</code> sem autorização do professor.</li>
+      <li>✅ A sua página precisa abrir corretamente ao clicar no seu nome na página inicial.</li>
+      <li>✅ Nesta primeira atividade, tente entregar seu trabalho em <strong>apenas um commit</strong>.</li>
+    </ul>
+
+    <hr />
+
+    <h2>Checklist de entrega</h2>
+    <ul class="checklist">
+      <li><input type="checkbox" disabled /> Clonei o repositório</li>
+      <li><input type="checkbox" disabled /> Criei minha branch</li>
+      <li><input type="checkbox" disabled /> Criei minha página</li>
+      <li><input type="checkbox" disabled /> Testei minha página no navegador</li>
+      <li><input type="checkbox" disabled /> Usei <code>git status</code></li>
+      <li><input type="checkbox" disabled /> Usei <code>git add</code></li>
+      <li><input type="checkbox" disabled /> Fiz meu commit</li>
+      <li><input type="checkbox" disabled /> Fiz push da minha branch</li>
+    </ul>
+
+    <hr />
+
+    <h2>Exemplo de estrutura da página do aluno</h2>
+    <p>
+      Você pode usar o modelo abaixo como ponto de partida e personalizar
+      como quiser (cores, textos, layout). A página deve conter, no mínimo:
+    </p>
+    <ul>
+      <li>seu nome;</li>
+      <li>uma pequena apresentação;</li>
+      <li>três interesses;</li>
+      <li>uma imagem;</li>
+      <li>um link para voltar para o <code>index.html</code>.</li>
+    </ul>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+  &lt;title&gt;João Silva&lt;/title&gt;
+  &lt;link rel="stylesheet" href="../style.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="pagina-aluno"&gt;
+    &lt;h1&gt;João Silva&lt;/h1&gt;
+
+    &lt;img src="https://via.placeholder.com/300" alt="Foto de João Silva" /&gt;
+
+    &lt;p&gt;
+      Olá! Sou aluno do 1º Ano - Ensino Médio e esta é a
+      minha primeira página criada usando Git e GitHub.
+    &lt;/p&gt;
+
+    &lt;h2&gt;Meus interesses&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Programação&lt;/li&gt;
+      &lt;li&gt;Jogos&lt;/li&gt;
+      &lt;li&gt;Música&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;a class="voltar" href="../index.html"&gt;&amp;larr; Voltar para a página inicial&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <hr />
+
+    <h2>Como o trabalho da turma se organiza</h2>
+    <p>
+      Cada aluno trabalha na sua própria branch, sem interferir no trabalho
+      dos colegas. Mais adiante, o professor vai revisar e juntar (merge)
+      cada branch à <code>main</code>, formando o site completo da turma.
+    </p>
+    <pre><code>main
+│
+├── arthur-goncalves
+├── brayan-paula
+├── brendha-duarte
+├── caue-souza
+├── davi-niedzievski
+├── ...
+└── rebecca-mroczko</code></pre>
+
+    <hr />
+
+    <h2>O que ainda não vamos ver</h2>
+    <p>Esta atividade tem um foco bem específico. Ainda <strong>não</strong> vamos falar sobre:</p>
+    <ul>
+      <li>conflitos de merge;</li>
+      <li>rebase;</li>
+      <li>cherry-pick;</li>
+      <li>Git Flow;</li>
+      <li>comandos avançados de Git.</li>
+    </ul>
+    <p>Por enquanto, o fluxo que importa é só este:</p>
+    <pre><code>clone
+  ↓
+branch
+  ↓
+editar/criar arquivo
+  ↓
+status
+  ↓
+add
+  ↓
+commit
+  ↓
+push</code></pre>
+
+    <p><strong>Bom trabalho e boa prática! 🚀</strong></p>
+
+    <a class="voltar" href="index.html">&larr; Voltar para a página inicial</a>
+
+  </main>
+
+  <footer>
+    <p>Atividade do Prof. Ricardo Varjão — Git e GitHub</p>
+  </footer>
+
+</body>
+</html>
